@@ -11,8 +11,8 @@ import json
 
 #Main function for file, gets users mood based on picture
 def getMood():
-	subscription_key = 'f6116e88a1da406dbf18ed4a8c69f8c7'
-	face_api_url = 'https://westcentralus.api.cognitive.microsoft.com/face/v1.0/detect'
+	subscription_key = '4f195ee2b2c34d3fb2d565088a9c1f38'
+	face_api_url = 'https://sync-me.cognitiveservices.azure.com/'+ '/face/v1.0/detect'
 	#image of person's face
 	image_data = open('mood.jpg', 'rb').read()
 	headers = { 'Ocp-Apim-Subscription-Key': subscription_key,

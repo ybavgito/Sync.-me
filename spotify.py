@@ -1,20 +1,5 @@
-'''
-This is the main file for the application. This application will
-create playlists for specific moods for a certain user using their own music.
-The user can either manually input their mood or the program will use a facial
-recognition API to detect the mood of the user by taking a picture of them
-after they have provided the program with all user scopes required. The program
-uses machine learning on a training set created using Last.fm tags and features
-about the songs obtained through Spotify to create the playlist for the user to
-try and classify the user's music into specific moods. 
+'''Developed by Mukunth Vaibhav | Sync.me'''
 
-In order to run the application, you must supply your unique user ID as the
-second argument in the terminal. Example:python spotify.py userID 
-This file defines the user scopes and prompts a user for their token 
-in order to access their data. The program will run until the user manually
-quits the program using 1. 
-'''
-#Load libraries
 import sys
 import json
 import spotipy
@@ -29,6 +14,7 @@ import learnSongs
 #Tries to obtain username from terminal
 if len(sys.argv) > 1:
 	username = sys.argv[1]
+
 else:
 	print("Please supply a user ID")
 	sys.exit()
@@ -42,7 +28,6 @@ scopes = ("user-read-recently-played"
 		  " playlist-modify-public"
 		  " playlist-modify-private"
 		  " user-read-email"
-		  " user-read-birthdate"
 		  " user-read-private"
 		  " user-read-playback-state"
 		  " user-modify-playback-state"
@@ -51,17 +36,19 @@ scopes = ("user-read-recently-played"
 		  " streaming"
 		  " user-follow-read"
 		  " user-follow-modify")
-#prompt for user permission
+
+#Fetching Permission to access spotify
+
 try:
 	token = util.prompt_for_user_token(username,scopes,
-								   client_id='563f890f0bc540309c44d40e35a0a462',
-								   client_secret='343030b9e9d0440b80bebb96647485af',
+								   client_id='b05498d9c6164304a950fc2fd185e19c',
+								   client_secret='3e406d9ddb2a4b1aa96fce31d72b5f75',
 								   redirect_uri='http://google.com/')
 except:
 	os.remove(".cache-{}".format(username))
 	token = util.prompt_for_user_token(username,scopes,
-								   client_id='563f890f0bc540309c44d40e35a0a462',
-								   client_secret='343030b9e9d0440b80bebb96647485af',
+								   client_id='b05498d9c6164304a950fc2fd185e19c',
+								   client_secret='3e406d9ddb2a4b1aa96fce31d72b5f75',
 								   redirect_uri='http://google.com/')
 #Takes picture of user to analyze their mood after they have provided permission
 getPicture.getPicture()
@@ -73,7 +60,8 @@ if token:
 
 	#will run till user quits the program
 	while True:
-		print("Welcome to the Sentiment Recommender! Please choose an option.")
+		print("Welcome to the Sync.me. We got you,fam !")
+		print("Please choose an option.")
 		print("0-Create personalized playlist")
 		print("1-exit")
 		print("")

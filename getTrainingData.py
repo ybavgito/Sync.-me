@@ -1,11 +1,4 @@
-'''
-This file uses the downloaded data called tagMoods.csv from Last.fm to create a training
-set for Spotify moods. It searches Spotify for the track in the dataset
-and if it is found, will record the danceability, energy, and valence of the track
-along with the mood corresponding to the tags users marked on Last.fm. It will then
-write the id of the track, the features, and the mood into a CSV file titled songMoods.csv.
-This data will then be used to train the machine learning model.  
-'''
+
 
 #Load libraries
 import pandas

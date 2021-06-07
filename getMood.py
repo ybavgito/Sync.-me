@@ -1,15 +1,10 @@
-'''
-Uses Microsoft Azure API to read an image of a person's face and detect their emotions. Returns
-a string containing the person's emotion. The four possible emotions it will return are "happy",
-"sad", "relaxed", and "angry". If no face is detected in the image, the default return value is 
-happy. The image that it tries to read in is called mood.jpg. 
-'''
 
-#Load libraries 
+
+
 import requests
 import json
 
-#Main function for file, gets users mood based on picture
+
 def getMood():
 	subscription_key = '4f195ee2b2c34d3fb2d565088a9c1f38'
 	face_api_url = 'https://sync-me.cognitiveservices.azure.com/'+ '/face/v1.0/detect'

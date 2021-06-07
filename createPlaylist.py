@@ -1,11 +1,4 @@
-'''
-This file gets the 500 most recent tracks saved to a user's profile. 
-It uses the already trained machine learning model and mood of the 
-listener to create a new playlist with up to 30 songs that fit the user's 
-current mood that is titled with the current mood. 
-If a playlist with that name already already exists, a new playlist will 
-be created and named "mood" 2. 
-'''
+
 
 #Load libraries
 import getMood

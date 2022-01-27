@@ -1,5 +1,5 @@
 # Sync.me
-Sync.me creates personalized Spotify playlists with up to 30 songs that fit the user’s current mood. It uses the five hundred most recent tracks saved to a user’s profile as possible songs for the playlist. The mood of the user is obtained using either by taking a picture of the user’s face and reading their emotions or by them manually inputting a mood.
+Sync.me builds customised Spotify playlists with up to 30 tracks that are appropriate for the user's current mood. As viable music for the playlist, it takes the 500 most recent tunes saved to a user's profile. The user's mood can be determined by taking a picture of their face and reading their emotions, or by manually inputting a mood.
 
 # Built With 
 - [Spotify API](https://developer.spotify.com/documentation/web-api/)
